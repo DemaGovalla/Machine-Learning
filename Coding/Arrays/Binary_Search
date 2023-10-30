@@ -1,0 +1,49 @@
+def binary_search(nums, target):
+
+    low = 0
+
+    high = len(nums) - 1
+
+
+    while low <= high:
+        mid = low + ((high - low) // 2)
+        
+        if nums[mid] == target:
+            return nums[mid]
+        
+        elif target < nums[mid]:
+            high = mid - 1
+
+
+
+        elif target > nums[mid]:
+            low = mid + 1
+        
+        
+            
+    return -1
+
+
+
+def main():
+
+	nums_lists = [[], [0,1], [1,2,3], [-1,0,3,5,9,12], [-1,0,3,5,9,12]]
+	target_list = [12, 1, 3, 9, 2]
+	for i in range(len(nums_lists)):
+		nums = nums_lists[i]
+		target = target_list[i]
+		index = binary_search(nums, target)
+		print(str(i+1) + ". Array to search: " + str(nums))
+		print("   Target: " + str(target))
+		if index != -1:
+			print("   " + str(target) + " exists in the array at index", index)
+		else:
+			print("   " + str(target) + " does not exist in the array so the return value is", index)
+		print("----------------------------------------------------------------------------------------------------\n")
+
+
+
+if __name__ == '__main__':
+    main()
+
+
