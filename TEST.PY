@@ -1,10 +1,30 @@
-string = "Educative"
-print (string[-1])
-print (string[-2])
-print (string[-3])
-print (string[-4])
-print (string[-5])
-print (string[-6])
-print (string[-7])
-print (string[-8])
-print (string[-9])
+# string = "Educative"
+# # string = "Dema"
+
+# string2 = ''
+# i = -1
+
+
+# while i >= -(len(string)):
+#     # string1 = string[i]
+#     string2 += string[i]
+#     i -= 1
+    
+
+# print(string2)
+
+
+string = "level"
+string1 = ''
+
+
+
+
+i = 0
+
+while i < len(string):
+    string1 += string[i]
+    i += 1
+    
+print(string1)
+    
